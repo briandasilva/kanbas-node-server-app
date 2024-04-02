@@ -1,0 +1,17 @@
+export default [
+  { _id: "A101", title: "Javascript Assignment", course: "CS101" },
+  { _id: "A102", title: "HTML Assignment", course: "CS101" },
+  { _id: "A103", title: "CSS Assignment", course: "CS101" },
+  { _id: "A201", title: "TCP UDP Assignment", course: "CS102" },
+  { _id: "A202", title: "Distributed Database", course: "CS102" },
+  { _id: "A203", title: "File System", course: "CS102" },
+  { _id: "A301", title: "Deep Learning Test", course: "CS103" },
+  { _id: "A302", title: "Tensor Flow Exam", course: "CS103" },
+  { _id: "A303", title: "Calc 3 Review", course: "CS103" },
+  { _id: "A301", title: "Opinion 1", course: "POLS2390" },
+  { _id: "A302", title: "Opinion 2", course: "POLS2390" },
+  { _id: "A303", title: "Final Paper", course: "POLS2390" },
+  { _id: "A301", title: "Command Pattern", course: "CS3500" },
+  { _id: "A302", title: "Solitaire", course: "CS3500" },
+  { _id: "A303", title: "Image Processor", course: "CS3500" },
+];

@@ -1,0 +1,42 @@
+export default [
+  {
+    _id: "CS101",
+    name: "Web Dev",
+    number: "CS4550",
+    startDate: "2023-01-10",
+    endDate: "2023-05-15",
+    image: "webdev.png",
+  },
+  {
+    _id: "CS102",
+    name: "Networks",
+    number: "CS4560",
+    startDate: "2023-01-10",
+    endDate: "2023-05-15",
+    image: "networks.jpg",
+  },
+  {
+    _id: "CS103",
+    name: "Machine Learning",
+    number: "CS4570",
+    startDate: "2023-01-10",
+    endDate: "2023-05-15",
+    image: "machine.jpg",
+  },
+  {
+    _id: "POLS101",
+    name: "Tech and Public Policy",
+    number: "POLS2390",
+    startDate: "2023-01-10",
+    endDate: "2023-05-15",
+    image: "books.jpg",
+  },
+  {
+    _id: "CS105",
+    name: "Object Oriented Design",
+    number: "CS3500",
+    startDate: "2023-01-10",
+    endDate: "2023-05-15",
+    image: "computer.jpg",
+  },
+];
