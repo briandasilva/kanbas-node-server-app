@@ -14,12 +14,29 @@ const DB_NAME = process.env.DB_NAME;
 
 mongoose.connect(CONNECTION_STRING, { dbName: DB_NAME });
 const app = express();
-app.use(cors({ credentials: true, origin: process.env.FRONTEND_URL }));
-const sessionOptions = {
-  secret: process.env.SESSION_SECRET,
-  resave: false,
-  saveUninitialized: false,
-};
+// GitHub branches
+const branches = ["main", "a5", "a6", "project"];
+
+const strippedNetlifyUrl = process.env.NETLIFY_URL.replace("https://", "");
+const allowedOrigins = [
+  process.env.LOCAL_FRONTEND_URL,
+  ...branches.map((branch) => `https://${branch}--${strippedNetlifyUrl}`),
+];
+
+app.use(
+  cors({
+    credentials: true,
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      } else {
+        const msg =
+          "The CORS policy for this site does not allow access from the specified Origin.";
+        return callback(new Error(msg), false);
+      }
+    },
+  })
+);
 if (process.env.NODE_ENV !== "development") {
   sessionOptions.proxy = true;
   sessionOptions.cookie = {
